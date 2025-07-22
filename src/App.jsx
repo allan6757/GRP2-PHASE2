@@ -12,9 +12,10 @@ import Newsletter from './components/Newsletter';
 function App() {
   return (
     <div>
+      <Navbar/>
       <Home />
       <Items />
-      <Navbar/>
+      
       <Newsletter/>
       {/* <Cart/> */}
       <Footer/>

@@ -25,7 +25,7 @@ function Items() {
                         <img src={sneaker.image} alt={sneaker.name} />
                         <h3>{sneaker.name}</h3>
                         <p>Name: {sneaker.name}</p>
-                        <p>Price: KES {sneaker.price}</p>
+                        <p>Price: KES {sneaker.Price}</p>
                         <Link to={`/sneakers/${sneaker.id}`}>View Details</Link>
                     </div>
                 ))}

@@ -1,4 +1,5 @@
 import React from "react";
+import Items from "./Items";
 import '../App.css';
 
 
@@ -14,7 +15,7 @@ function Cart({ cartItems, onIncrement, onRemove }) {
             <img src={item.image} alt={item.name} className="cart-img" />
             <div className="cart-details">
               <h4>{item.name}</h4>
-              <p>Price: ${item.price}</p>
+              <p>Price: ${item.Price}</p>
               <p>Quantity: {item.quantity}</p>
               <button onClick={() => onIncrement(item)}>+1</button>
               <button onClick={() => onRemove(item)}>Remove</button>
