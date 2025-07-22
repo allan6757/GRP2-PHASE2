@@ -1,10 +1,12 @@
+// components/Cart.jsx
 import React from "react";
 import { useCart } from "../context/CartContext";
 import '../App.css';
-import Items from './Items'
 
 function Cart() {
-  const { cartItems, incrementItem, removeItem } = useCart();
+  const { cartItems, incrementItem, decrementItem, removeItem, clearCart } = useCart();
+
+  const cartTotal = cartItems.reduce((sum, item) => sum + item.total, 0);
 
   return (
     <div className="cart">
@@ -12,18 +14,24 @@ function Cart() {
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        cartItems.map((item, index) => (
-          <div key={index} className="cart-item">
-            <img src={item.image} alt={item.name} className="cart-img" />
-            <div className="cart-details">
-              <h4>{item.name}</h4>
-              <p>Price: KES {item.Price}</p>
-              <p>Quantity: {item.quantity}</p>
-              <button onClick={() => incrementItem(item)}>+1</button>
-              <button onClick={() => removeItem(item)}>Remove</button>
+        <>
+          {cartItems.map((item, index) => (
+            <div key={index} className="cart-item">
+              <img src={item.image} alt={item.name} className="cart-img" />
+              <div className="cart-details">
+                <h4>{item.name}</h4>
+                <p>Price: KES {item.Price}</p>
+                <p>Quantity: {item.quantity}</p>
+                <p>Total: KES {item.total}</p>
+                <button onClick={() => incrementItem(item)}>+1</button>
+                <button onClick={() => decrementItem(item)}>-1</button>
+                <button onClick={() => removeItem(item)}>Remove</button>
+              </div>
             </div>
-          </div>
-        ))
+          ))}
+          <h3>Cart Total: KES {cartTotal}</h3>
+          <button onClick={clearCart} className="clear-cart">Clear Cart</button>
+        </>
       )}
     </div>
   );

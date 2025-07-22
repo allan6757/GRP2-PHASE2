@@ -33,14 +33,13 @@ function Navbar() {
                 <Link to="/">SneakerStore</Link>
             </div>
 
-            <ul className="nav-links">
-                <li><Link to="/">Home</Link></li>
-                {/* Changed Products link to potentially use the search functionality later */}
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
-                <li><Link to="/add-sneaker">Add Sneaker</Link></li>
-            </ul>
+      <ul className="nav-links">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/items">Products</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/cart">Cart</Link></li>
+        <li><Link to="/add-sneaker">Add Sneaker</Link></li>
+      </ul>
 
             <div className="search-bar">
                 <input
