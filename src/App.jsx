@@ -1,24 +1,23 @@
-import { useState } from 'react'
-import { Routes, Route} from 'react-router-dom';
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Items from './components/Items';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
-
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
-    <div>
-      <Home />
-      <Items />
-      <Navbar/>
-      <Newsletter/>
-      {/* <Cart/> */}
-      <Footer/>
-    </div>
+    <CartProvider>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<><Home /><Items /><Newsletter /></>} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
+    </CartProvider>
   );
 }
 

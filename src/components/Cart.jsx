@@ -1,9 +1,11 @@
 import React from "react";
+import { useCart } from "../context/CartContext";
 import '../App.css';
 import Items from './Items'
 
+function Cart() {
+  const { cartItems, incrementItem, removeItem } = useCart();
 
-function Cart({ cartItems, onIncrement, onRemove }) {
   return (
     <div className="cart">
       <h2>Your Cart</h2>
@@ -15,15 +17,14 @@ function Cart({ cartItems, onIncrement, onRemove }) {
             <img src={item.image} alt={item.name} className="cart-img" />
             <div className="cart-details">
               <h4>{item.name}</h4>
-              <p>Price: ${item.price}</p>
+              <p>Price: KES {item.Price}</p>
               <p>Quantity: {item.quantity}</p>
-              <button onClick={() => onIncrement(item)}>+1</button>
-              <button onClick={() => onRemove(item)}>Remove</button>
+              <button onClick={() => incrementItem(item)}>+1</button>
+              <button onClick={() => removeItem(item)}>Remove</button>
             </div>
           </div>
         ))
       )}
-
     </div>
   );
 }

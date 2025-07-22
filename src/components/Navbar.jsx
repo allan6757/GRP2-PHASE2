@@ -17,7 +17,7 @@ function Navbar() {
 
                 {/* Navigation menu */}
                 <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/Home">Home</Link></li>
                     <li><Link to="/Items">Products</Link></li>
                     <li><Link to="/About">About</Link></li>
                     <li><Link to="/Cart">Cart</Link></li>
