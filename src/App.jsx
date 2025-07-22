@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
 import AddSneaker from './components/AddSneaker';
+import SneakerDetails from './components/SneakerDetails'; // Import the new component
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Route path="/items" element={<Items />} /> 
         <Route path="/cart" element={<Cart />} />
         <Route path="/add-sneaker" element={<AddSneaker />} />
+        {/* New: Route for Sneaker Details */}
+        <Route path="/sneakers/:id" element={<SneakerDetails />} />
       </Routes>
       <Footer />
     </CartProvider>

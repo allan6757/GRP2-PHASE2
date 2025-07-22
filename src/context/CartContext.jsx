@@ -19,25 +19,40 @@ export const CartProvider = ({ children }) => {
           : item
       ));
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      setCartItems([...cartItems, { ...product, quantity: 1, Price: parseFloat(product.Price) }]);
     }
   };
 
- const incrementItem = (product) => {
-  setCartItems(cartItems.map(item =>
-    item.id === product.id
-      ? { ...item, quantity: item.quantity + 1, total: (parseInt(item.Price) * (item.quantity + 1)) }
-      : item
-  ));
-};
+  const incrementItem = (product) => {
+    setCartItems(cartItems.map(item =>
+      item.id === product.id
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+    ));
+  };
 
+  const decrementItem = (product) => {
+    setCartItems(prevItems => {
+      const updatedItems = prevItems.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
+      return updatedItems.filter(item => item.quantity > 0);
+    });
+  };
 
+  // Ensure removeItem is defined
   const removeItem = (product) => {
     setCartItems(cartItems.filter(item => item.id !== product.id));
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, incrementItem, removeItem }}>
+    <CartContext.Provider value={{ cartItems, addToCart, incrementItem, decrementItem, removeItem, clearCart }}>
       {children}
     </CartContext.Provider>
   );
