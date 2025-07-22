@@ -3,7 +3,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
-import "./app.css"; // Optional for styling
+import "../App.css"; // Optional for styling
 
 function Footer() {
     return (

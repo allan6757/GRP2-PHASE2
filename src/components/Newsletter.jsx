@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 const API_BASE_URL = "http://localhost:3000/Newsletter";
+import '../App.css'
 
 // Newsletter component handles user subscriptions/messages
 function Newsletter() {

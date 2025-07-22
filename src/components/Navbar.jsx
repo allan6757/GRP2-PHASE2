@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
+import "../App.css";
 
 // Functional component for navigation bar
 function NavBar() {
