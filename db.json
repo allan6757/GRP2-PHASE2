@@ -1,0 +1,35 @@
+{
+"product":[
+    {
+        "id": "1",
+        "name": "Addidas",
+        "image":"",
+        "Price":"4999",
+        "Stock":"5"
+    },
+     {
+        "id": "2",
+        "name": "Jordans",
+        "image":"",
+        "Price":"6999",
+        "Stock":"7"
+    },
+     {
+        "id": "3",
+        "name": "Converse",
+        "image":"",
+        "Price":"2999",
+        "Stock":"3"
+    }
+],
+"Newsletter":[
+    {
+        "id":"1",
+        "user":"mwanikijoe1@gmail.com",
+        "message":"i love the jordans",
+        "created":"2023-01-20"
+
+    }
+
+]
+}
