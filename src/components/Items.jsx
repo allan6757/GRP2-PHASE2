@@ -1,5 +1,5 @@
 import react from 'react'
-import {link} from 'react-router-dom';
+import {Link} from "react-router-dom";
 import "../App.css";
 
 //the base url should be filled, anywhere where there is https put baseurl
