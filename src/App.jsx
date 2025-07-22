@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
 import AddSneaker from './components/AddSneaker';
 import { CartProvider } from './context/CartContext';
+import About from './components/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/items" element={<Items />} /> 
         <Route path="/cart" element={<Cart />} />
         <Route path="/add-sneaker" element={<AddSneaker />} />
+        <Route path="/about" element={<About/>} />
       </Routes>
       <Footer />
     </CartProvider>
