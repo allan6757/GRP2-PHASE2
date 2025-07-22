@@ -23,13 +23,14 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const incrementItem = (product) => {
-    setCartItems(cartItems.map(item =>
-      item.id === product.id
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
-    ));
-  };
+ const incrementItem = (product) => {
+  setCartItems(cartItems.map(item =>
+    item.id === product.id
+      ? { ...item, quantity: item.quantity + 1, total: (parseInt(item.Price) * (item.quantity + 1)) }
+      : item
+  ));
+};
+
 
   const removeItem = (product) => {
     setCartItems(cartItems.filter(item => item.id !== product.id));
