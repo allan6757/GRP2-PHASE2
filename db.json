@@ -1,35 +1,39 @@
 {
-"product":[
+  "product": [
     {
-        "id": "1",
-        "name": "Addidas",
-        "image":"https://i.pinimg.com/736x/42/ad/3d/42ad3d598cb01faaf7f0834e538fde12.jpg",
-        "Price":"4999",
-        "Stock":"5"
+      "id": "1",
+      "name": "Addidas",
+      "image": "https://i.pinimg.com/736x/42/ad/3d/42ad3d598cb01faaf7f0834e538fde12.jpg",
+      "Price": "4999",
+      "Stock": "5"
     },
-     {
-        "id": "2",
-        "name": "Jordans",
-        "image":"https://i.pinimg.com/736x/42/ad/3d/42ad3d598cb01faaf7f0834e538fde12.jpg",
-        "Price":"6999",
-        "Stock":"7"
-    },
-     {
-        "id": "3",
-        "name": "Converse",
-        "image":"https://i.pinimg.com/736x/f0/f5/39/f0f53985860e33188c1c855bb4f34408.jpg",
-        "Price":"2999",
-        "Stock":"3"
-    }
-],
-"Newsletter":[
     {
-        "id":"1",
-        "user":"mwanikijoe1@gmail.com",
-        "message":"i love the jordans",
-        "created":"2023-01-20"
-
+      "id": "2",
+      "name": "Jordans",
+      "image": "https://i.pinimg.com/736x/42/ad/3d/42ad3d598cb01faaf7f0834e538fde12.jpg",
+      "Price": "6999",
+      "Stock": "7"
+    },
+    {
+      "id": "3",
+      "name": "Converse",
+      "image": "https://i.pinimg.com/736x/f0/f5/39/f0f53985860e33188c1c855bb4f34408.jpg",
+      "Price": "2999",
+      "Stock": "3"
     }
-
-]
+  ],
+  "Newsletter": [
+    {
+      "id": "1",
+      "user": "mwanikijoe1@gmail.com",
+      "message": "i love the jordans",
+      "created": "2023-01-20"
+    },
+    {
+      "id": "2ac1",
+      "user": "muzna.mohamed@gmail.com",
+      "message": "i love the shoes",
+      "created": "2025-07-22T17:14:54.530Z"
+    }
+  ]
 }

@@ -22,7 +22,7 @@ function Newsletter() {
 
         try {
             // Send POST request to json-server
-            const response = await fetch("http://localhost:3000/newsletter", {
+            const response = await fetch("http://localhost:3000/Newsletter", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
