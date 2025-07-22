@@ -9,6 +9,7 @@ import Newsletter from './components/Newsletter';
 import AddSneaker from './components/AddSneaker';
 import SneakerDetails from './components/SneakerDetails'; // Import the new component
 import { CartProvider } from './context/CartContext';
+import About from './components/About';
 
 function App() {
   return (
