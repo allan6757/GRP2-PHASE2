@@ -25,6 +25,7 @@ function Home() {
   return (
     <div className="home-container">
       <h1>Welcome to the Sneaker Store</h1>
+      <p>Ready for your next adventure? The Sneaker Store has the perfect sneakers to keep up with your active lifestyle. From rugged trail runners to sleek urban kicks, explore our collection and start your journey.</p>
       <div className="slideshow">
         <img
           src={sneakerImages[currentSlide]}

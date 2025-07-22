@@ -1,5 +1,6 @@
 import React from "react";
 import '../App.css';
+import Items from './Items'
 
 
 function Cart({ cartItems, onIncrement, onRemove }) {
