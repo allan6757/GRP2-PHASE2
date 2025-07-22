@@ -64,4 +64,44 @@
           font-family: Arial, sans-serif;
           color: #333;
         }
+
+      
+        .cart {
+          padding: 20px;
+          border-top: 2px solid #eee;
+        }
+
+        .cart-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 10px;
+        }
+
+        .cart-img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          margin-right: 20px;
+        }
+
+        .cart-details {
+          text-align: left;
+        }
+
+        .cart-details button {
+          margin-right: 10px;
+          background-color: #333;
+          color: white;
+          padding: 5px 10px;
+          border: none;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+
+        .cart-details button:hover {
+          background-color: #555;
+        }
+      
       
