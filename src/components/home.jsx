@@ -3,10 +3,11 @@ import '..App.css';
 
 // Sample sneaker images for the slideshow
 const sneakerImages = [
-  "https://example.com/sneaker1.jpg",
-  "https://example.com/sneaker2.jpg",
-  "https://example.com/sneaker3.jpg",
-  "https://example.com/sneaker4.jpg",
+  "https://i.pinimg.com/736x/0c/be/2c/0cbe2c0a6167086fecdf99a62b898e97.jpg",
+  "https://i.pinimg.com/1200x/cb/62/f2/cb62f26932b4958069f2b09fb48125d1.jpg",
+  "https://i.pinimg.com/736x/8d/bb/1b/8dbb1b50342f5a3914f262d5e41f6243.jpg",
+  "https://i.pinimg.com/736x/69/2b/0d/692b0d7acff70f764216fc7a2fc5f19f.jpg"
+
 ];
 
 function Home() {
