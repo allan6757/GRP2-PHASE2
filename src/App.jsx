@@ -10,6 +10,7 @@ import Newsletter from './components/Newsletter';
 import AddSneaker from './components/AddSneaker';
 import SneakerDetails from './components/SneakerDetails';
 import { CartProvider } from './context/CartContext';
+import About from './components/About';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState(''); // State to hold the search query
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/add-sneaker" element={<AddSneaker />} />
         <Route path="/sneakers/:id" element={<SneakerDetails />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </CartProvider>
