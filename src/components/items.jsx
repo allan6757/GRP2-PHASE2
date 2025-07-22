@@ -3,7 +3,7 @@ import {link} from 'react-router-dom';
 import "../App.css";
 
 //the base url should be filled, anywhere where there is https put baseurl
-const API_BASE_URL= "";
+const API_BASE_URL= "http://localhost:3000/product";
 
 function items(){
     const[sneakers, setSneakers]=useState([]);
