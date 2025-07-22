@@ -32,22 +32,7 @@ function Items() {
       </div>
     </div>
   );
-    return (
-        <div className="items-container">
-            <h2>Kick it with these Sneakers!</h2>
-            <div className="items-grid">
-                {sneakers.map((sneaker) => (
-                    <div className="sneaker-card" key={sneaker.id}>
-                        <img src={sneaker.image} alt={sneaker.name} />
-                        <h3>{sneaker.name}</h3>
-                        <p>Name: {sneaker.name}</p>
-                        <p>Price: KES {sneaker.Price}</p>
-                        <Link to={`/sneakers/${sneaker.id}`}>View Details</Link>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+    
 }
 
 export default Items;
