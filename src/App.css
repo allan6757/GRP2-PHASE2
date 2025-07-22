@@ -83,6 +83,95 @@ button:disabled {
   cursor: not-allowed;
   transform: none;
 }
+/* --- About Page (NEW STYLES) --- */
+.about-page-container {
+    padding: 2.5rem; /* Equivalent to p-8 */
+    max-width: 700px; /* Adjusted max-width for consistency */
+    margin: 2rem auto; /* Equivalent to mx-auto mt-10 */
+    background-color: white;
+    box-shadow: 0 4px 15px var(--shadow-light); /* Equivalent to shadow-lg */
+    border-radius: var(--radius-medium); /* Equivalent to rounded-lg */
+    line-height: 1.6; /* Ensure good readability */
+    text-align: left; /* Align text left within the container */
+}
+
+.about-title {
+    font-size: 2.5rem; /* Equivalent to text-4xl */
+    font-weight: 700; /* Equivalent to font-bold */
+    color: var(--primary-color); /* Equivalent to text-gray-800 */
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    text-align: center; /* Equivalent to text-center */
+    letter-spacing: -0.5px;
+}
+
+.about-subtitle {
+    font-size: 1.8rem; /* Equivalent to text-2xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: var(--primary-color); /* Equivalent to text-gray-800 */
+    margin-top: 2rem; /* Spacing before new section */
+    margin-bottom: 0.8rem; /* Equivalent to mb-3 */
+}
+
+.about-paragraph {
+    font-size: 1.05rem; /* Equivalent to text-lg */
+    color: var(--text-color); /* Equivalent to text-gray-700 */
+    line-height: 1.7; /* Enhanced leading-relaxed */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.about-list {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin-bottom: 1.5rem; /* Space after the list */
+}
+
+.about-list-item {
+    font-size: 1.05rem; /* Equivalent to text-lg */
+    color: var(--text-color); /* Equivalent to text-gray-700 */
+    line-height: 1.7; /* Consistent line height */
+    margin-bottom: 0.5rem; /* Spacing between list items */
+    position: relative;
+    padding-left: 1.5rem; /* Space for custom bullet */
+}
+
+.about-list-item::before {
+    content: "•"; /* Custom bullet point */
+    color: var(--accent-color); /* Accent color for bullets */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1; /* Align bullet vertically */
+}
+
+/* --- Responsive Design (keep your existing ones and add adjustments for About page) --- */
+@media (max-width: 768px) {
+    .about-page-container {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+    .about-title {
+        font-size: 2rem;
+    }
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+    .about-paragraph, .about-list-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page-container {
+        padding: 1rem;
+    }
+    .about-title {
+        font-size: 1.8rem;
+    }
+    .about-subtitle {
+        font-size: 1.3rem;
+    }
+}
 
 /* --- Navbar --- */
 .navbar {
@@ -173,6 +262,8 @@ button:disabled {
   transform: none; /* Keep search button flat on hover */
 }
 
+/* ... (your existing App.css code) ... */
+
 /* --- Home Section --- */
 .home-container {
   padding: 3rem 1rem;
@@ -184,9 +275,18 @@ button:disabled {
 
 .home-container h1 {
   font-size: 2.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Adjusted margin for better flow with paragraph */
   color: var(--primary-color);
   letter-spacing: -0.5px;
+}
+
+/* NEW STYLE FOR THE PARAGRAPH IN HOME.JSX */
+.home-container p {
+  font-size: 1.15rem; /* Slightly larger for prominence */
+  color: var(--text-color); /* Use the main text color */
+  max-width: 700px; /* Limit width for readability */
+  margin: 0 auto 2.5rem auto; /* Center it and add more space below */
+  line-height: 1.8; /* Improve readability with more line spacing */
 }
 
 .slideshow {
@@ -211,6 +311,26 @@ button:disabled {
   transform: scale(1.02);
 }
 
+/* ... (rest of your App.css code) ... */
+
+/* --- Responsive Design (adjustments for Home paragraph if needed) --- */
+@media (max-width: 768px) {
+  /* ... existing responsive rules ... */
+
+  .home-container p {
+    font-size: 1rem; /* Smaller font on smaller screens */
+    margin-bottom: 2rem; /* Adjusted margin */
+  }
+}
+
+@media (max-width: 480px) {
+  /* ... existing responsive rules ... */
+
+  .home-container p {
+    font-size: 0.95rem; /* Even smaller on very small screens */
+    margin-bottom: 1.5rem;
+  }
+}
 /* --- Items Page --- */
 .items-container {
   max-width: 1200px;
