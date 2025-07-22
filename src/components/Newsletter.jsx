@@ -1,74 +1,80 @@
-// components/Newsletter.jsx
-
 import React, { useState } from "react";
-import "./App.css";
+const API_BASE_URL = "http://localhost:3000/Newsletter";
 
-
+// Newsletter component handles user subscriptions/messages
 function Newsletter() {
-    // Form state
-    const [user, setUser] = useState("");
-    const [message, setMessage] = useState("");
-
-    // Newsletter entries state
-    const [newsletterList, setNewsletterList] = useState([]);
+    // State variables for form inputs
+    const [user, setUser] = useState(""); // Stores email address
+    const [message, setMessage] = useState(""); // Stores user message
+    const [status, setStatus] = useState(""); // Feedback status after submission
 
     // Handle form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent page reload
 
-        const today = new Date();
-        const formattedDate = today.toISOString().split("T")[0]; // "YYYY-MM-DD"
-
+        // Construct the object to POST to the server
         const newEntry = {
-            id: newsletterList.length + 1,
             user,
             message,
-            created: formattedDate,
+            created: new Date().toISOString() // Auto-generate timestamp
         };
 
-        // Update list
-        setNewsletterList([...newsletterList, newEntry]);
+        try {
+            // Send POST request to json-server
+            const response = await fetch("http://localhost:3000/newsletter", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newEntry)
+            });
 
-        // Clear form
-        setUser("");
-        setMessage("");
+            // If request is successful
+            if (response.ok) {
+                // Update status message and reset form fields
+                setStatus(`Created at: ${new Date().toLocaleString()}`);
+                setUser("");
+                setMessage("");
+            } else {
+                // Handle non-200 responses
+                setStatus(" Failed to submit.");
+            }
+        } catch (error) {
+            // Handle network or server errors
+            console.error("Error:", error);
+            setStatus("Server error.");
+        }
     };
     return (
         <>
-            <div className="newsletter-container">
-                <h2>Join Our Newsletter</h2>
+            <div className="newsletter">
+                <h2>Subscribe to our Newsletter</h2>
 
-                {/* Form to submit email and message */}
+                {/* Newsletter submission form */}
                 <form onSubmit={handleSubmit}>
+                    {/* Email input field */}
                     <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Your Email"
                         value={user}
                         onChange={(e) => setUser(e.target.value)}
                         required
                     />
 
+                    {/* Message textarea */}
                     <textarea
-                        placeholder="Your message"
+                        placeholder="Your Message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
                     ></textarea>
-                    <button type="submit">Subscribe</button>
+
+                    {/* Submit button */}
+                    <button type="submit">Submit</button>
                 </form>
 
-                {/* Display list of submitted messages */}
-                <div className="newsletter-list">
-                    <h3>Newsletter Submissions:</h3>
-                    {newsletterList.map((entry) => (
-                        <div key={entry.id} className="newsletter-entry">
-                            <p><strong>User:</strong> {entry.user}</p>
-                            <p><strong>Message:</strong> {entry.message}</p>
-                            <p><strong>Created:</strong> {entry.created}</p>
-                            <hr />
-                        </div>
-                    ))}
-                </div>
+                {/* Display status message after submission */}
+                {status && <p>{status}</p>}
             </div>
         </>
     );
