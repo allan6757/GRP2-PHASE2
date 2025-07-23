@@ -5,7 +5,7 @@
       "name": "Addidas",
       "image": "https://i.pinimg.com/736x/42/ad/3d/42ad3d598cb01faaf7f0834e538fde12.jpg",
       "Price": "4999",
-      "Stock": "5"
+      "Stock": 10
     },
     {
       "id": "2",
