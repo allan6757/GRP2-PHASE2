@@ -34,9 +34,9 @@ body {
 }
 
 #root {
-  max-width: 1400px; /* Increased max-width for more content space */
-  margin: 0 auto;
-  padding: 1.5rem;
+  /* **UPDATED**: Removed max-width to allow full webpage fill */
+  /* **UPDATED**: Removed padding to allow full webpage fill */
+  margin: 0 auto; /* Keeps it centered if for some reason it doesn't stretch fully */
   text-align: center;
 }
 
@@ -274,6 +274,10 @@ button:disabled {
   border-radius: var(--radius-medium);
   box-shadow: 0 4px 15px var(--shadow-light);
   margin-bottom: 2rem;
+  /* **NEW**: Added max-width and adjusted margin for content readability */
+  max-width: 1200px; /* Limits content width on large screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-container h1 {

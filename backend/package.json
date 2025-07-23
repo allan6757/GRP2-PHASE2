@@ -1,0 +1,15 @@
+{
+  "name": "grp2-phase2-backend",
+  "version": "1.0.0",
+  "description": "JSON Server for sneaker data",
+  "main": "db.json",
+  "scripts": {
+    "start": "json-server --watch db.json --port $PORT --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
