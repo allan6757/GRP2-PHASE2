@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { useCart } from "../context/CartContext";
 
-const API_BASE_URL = "http://localhost:3000/product";
+const API_BASE_URL = "https://grp2-phase2.onrender.com/product";
 
 // Items now receives searchQuery as a prop
 function Items({ searchQuery }) {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const API_BASE_URL = "http://localhost:3000/Newsletter";
+const API_BASE_URL = "https://grp2-phase2.onrender.com/Newsletter";
 import '../App.css'
 
 // Newsletter component handles user subscriptions/messages
@@ -22,7 +22,7 @@ function Newsletter() {
 
         try {
             // Send POST request to json-server
-            const response = await fetch("http://localhost:3000/Newsletter", {
+            const response = await fetch(API_BASE_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
