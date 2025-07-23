@@ -7,28 +7,31 @@ function About() {
         <div className="about-page-container">
             <h1 className="about-title">About SneakerStore</h1>
             <p className="about-paragraph">
-                Welcome to SneakerStore, your ultimate destination for the latest and greatest in sneaker fashion!
-                We are passionate about sneakers and committed to bringing you a curated selection of high-quality,
-                authentic footwear from top brands around the world.
+                Welcome to SneakerStore — where the streets meet style, and every step tells a story. We're more than just a shop;
+                we're a hub for sneaker explorers, trendsetters, and collectors chasing that next iconic pair. From bold takes
+                on classic silhouettes to rare kicks with stories stitched into every seam, our collection is your passport to
+                the culture of cool. Whether you're repping high-flying Jordans, reimagined Adidas legends, or timeless Converse heat,
+                every name has its own journey — and now, so do you.
             </p>
             <p className="about-paragraph">
-                Our mission is to provide sneaker enthusiasts with an unparalleled shopping experience,
-                offering a wide range of styles, sizes, and exclusive releases. Whether you're a seasoned collector
-                or just starting your sneaker journey, we've got something for everyone.
+                We're here to elevate your sneaker game — no matter where you're starting from.
+                With a handpicked mix of standout styles, exclusive drops, and sizes that fit real life,
+                SneakerStore makes every pickup feel personal. From your first pair to your fiftieth,
+                this is where the journey stays fresh.
             </p>
             <h2 className="about-subtitle">Our Vision</h2>
             <p className="about-paragraph">
-                To be the leading online retailer for sneakers, recognized for our exceptional customer service,
-                diverse product range, and commitment to the sneaker community. We believe that sneakers are more
-                than just shoes – they're a form of self-expression and culture.
+                We’re chasing more than sales — we’re chasing legacy. SneakerStore aims to be the heartbeat of
+                sneaker culture, known for killer kicks, real service, and a deep respect for the community.
+                Because sneakers speak — and we listen.
             </p>
             <h2 className="about-subtitle">What We Offer</h2>
-            <ul className="about-list"> {/* Added ul wrapper */}
-                <li className="about-list-item">A vast collection of authentic sneakers from popular and emerging brands.</li>
-                <li className="about-list-item">Exclusive releases and limited-edition drops.</li>
-                <li className="about-list-item">Secure and seamless online shopping experience.</li>
-                <li className="about-list-item">Fast and reliable shipping.</li>
-                <li className="about-list-item">Dedicated customer support ready to assist you.</li>
+            <ul className="about-list"> {/*added ul wrapper*/}
+                <li className="about-list-item">A fire collection of kicks — from OG classics to new-wave legends.</li>
+                <li className="about-list-item">Exclusive drops and rare pairs you’ll flex, not just wear.</li>
+                <li className="about-list-item">Safe, easy checkout that’s smoother than a clean lace swap.</li>
+                <li className="about-list-item">Quick, reliable delivery so you can step fresh without delay.</li>
+                <li className="about-list-item">Real support from sneakerheads who speak your language.</li>
             </ul>
             <p className="about-paragraph">
                 Thank you for choosing SneakerStore. We look forward to helping you find your next favorite pair!
