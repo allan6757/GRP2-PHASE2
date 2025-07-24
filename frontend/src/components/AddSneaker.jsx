@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-const API_BASE_URL = "http://localhost:3000/product";
+const API_BASE_URL = "https://grp2-phase2.onrender.com/product";
 
 function AddSneaker() {
   const [formData, setFormData] = useState({
