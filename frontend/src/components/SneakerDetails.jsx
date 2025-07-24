@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "../App.css"; // Assuming you have App.css for styling
 import { useCart } from "../context/CartContext";
 
-const API_BASE_URL = "http://localhost:3000/product"; // Ensure this matches your json-server URL
+const API_BASE_URL = "https://grp2-phase2.onrender.com/product"; // Ensure this matches your json-server URL
 
 function SneakerDetails() {
   const { id } = useParams();
