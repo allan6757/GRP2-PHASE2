@@ -198,6 +198,16 @@ button:disabled {
   color: var(--accent-color);
   letter-spacing: 0.5px;
 }
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    /* Adjust this gap value to your preference */
+    gap: 30px; /* Increased from 20px (or whatever it was) for more space */
+    flex-wrap: wrap; /* Important for responsiveness: allows items to wrap to next line if space is limited */
+    margin: 0; /* Ensures no default margins */
+    padding: 0; /* Ensures no default padding */
+    list-style: none; /* In case it's a ul/li, removes bullet points */
+}
 
 .nav-links {
   display: flex;
