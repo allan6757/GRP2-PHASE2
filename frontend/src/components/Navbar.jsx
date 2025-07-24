@@ -26,7 +26,7 @@ function Navbar({ searchQuery, setSearchQuery }) {
         <li><Link to="/items">Products</Link></li>
         <li><Link to="/about">About</Link></li> {/* Assuming you'll create an About page later */}
         <li><Link to="/cart">Cart</Link></li>
-        <li><Link to="/add-sneaker">Add Sneaker</Link></li>
+        <li><Link to="/add-sneaker">Add Sneaker</Link><br></br></li>
       </ul>
 
       <div className="search-bar">
