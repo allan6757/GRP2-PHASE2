@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
-import "../App.css"; // Assuming you have App.css for styling
+import "../App.css"; 
 import { useCart } from "../context/CartContext";
 
-// Ensure this matches your deployed json-server URL or local if testing locally
+
 const API_BASE_URL = "https://grp2-phase2.onrender.com/product"; 
 
 function SneakerDetails() {
@@ -178,7 +178,7 @@ function SneakerDetails() {
     <section className="details-section">
       <div className="max-width-wrapper">
         <div className="details-content">
-            <button onClick={() => navigate('/items')} className="back-button"> {/* Changed window.history.back to navigate */}
+            <button onClick={() => navigate('/items')} className="back-button"> 
                 Back to Sneakers
             </button>
             <div className="sneaker-detail-card">

@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // useState is no longer needed here, but keeping for reference if future local state is added
+import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
 import "../App.css";
 
@@ -24,7 +24,7 @@ function Navbar({ searchQuery, setSearchQuery }) {
       <ul className="nav-links">
         <li><Link to="/home"></Link></li>
         <li><Link to="/items">Products</Link></li>
-        <li><Link to="/about">About</Link></li> {/* Assuming you'll create an About page later */}
+        <li><Link to="/about">About</Link></li> 
         <li><Link to="/cart">Cart</Link></li>
         <li><Link to="/add-sneaker">Add Sneaker</Link><br></br></li>
       </ul>

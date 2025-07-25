@@ -17,11 +17,11 @@ function App() {
 
   return (
     <CartProvider>
-      {/* Pass searchQuery and setSearchQuery to Navbar */}
+      
       <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <Routes>
         <Route path="/" element={<><Home /><Newsletter /></>} />
-        {/* Pass searchQuery to Items */}
+        
         <Route path="/items" element={<Items searchQuery={searchQuery} />} /> 
         <Route path="/cart" element={<Cart />} />
         <Route path="/add-sneaker" element={<AddSneaker />} />
