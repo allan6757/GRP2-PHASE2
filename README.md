@@ -98,6 +98,7 @@ The project was built collaboratively by :
 . Allan MAina
 . Joe Kariuki
 . Muzna Ebrahim Mohamed
+. Sydney Osindi
 
 ### LIVE DEMO
 
@@ -116,4 +117,5 @@ For questions, suggestions, and feedback, please reach out to any of the collabo
 allan6757
 Spiffy047
 muzna-ebrahim
+Sydney-lab
 
